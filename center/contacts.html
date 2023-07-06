@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ремонт ноутбуков | СЦ «Штурман»</title>
+    <script src="js/app.js" defer></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=9762f7a5-ccb7-460c-b4d0-4bb84a644096&lang=ru_RU" type="text/javascript">
+    </script>
+  <script type="text/javascript">
+
+    ymaps.ready(init); 
+    var myMap;
+    
+    function init() {
+    
+      myMap = new ymaps.Map("map", {
+        center: [57.435264, 56.934756],
+        zoom: 16
+      }); 
+    
+      myMap.controls.add(
+        new ymaps.control.ZoomControl()
+      ); 
+    
+      myPlacemark = new ymaps.Placemark([57.435264, 56.934756],
+      {
+        
+      },
+      {
+        preset: "twirl#redDotIcon"
+      }
+      );
+      myMap.geoObjects.add(myPlacemark);    
+    };
+  </script>
+</head>
+<body id="main_content">
+    <head>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </head>
+    <header class="hero-block">
+        <div class="layers">
+            <div class="layer_header">
+                <div class="layer_description">Контакты</div>
+            </div>
+            <div class="layer layers_base" style="background-image: url(img/layer_front.png);"></div>
+            <div class="layer layers_middle" style="background-image: url(img/layer_middle.png);"></div>
+            <div class="layer layers_front" style="background-image: url(img/layer_title.png);"></div>
+        </div>
+    </header>
+    <article class="main-article" style="background-image: url(./img/backg.jpg);">
+        <div id="text" class="main-article_content">
+            <h2 id="head_main">
+                <span>Контактная информация</span>
+            </h2>
+        </div>
+        <div id="main_contacts">
+            <div class="contact-page">
+                <div class="contact-info">
+                    <div class="item">
+                        <img src="img/contacts/phone.png" class="icons"></i>
+                        <a id="nodec" href=”tel:+7342713-22-89”>+7 (342) 713-22-89</a>
+                    </div>
+                    <div class="item">
+                        <img src="img/contacts/gps.png" class="icons"></i>
+                        ул. Ленина, д. 67, Кунгур
+                    </div>
+                    <div class="item">
+                        <img src="img/contacts/clocks.png" class="icons"></i>
+                        пн-пт 10:00–18:00; сб 10:00–15:00
+                    </div>
+                    <div class="item">
+                        <img src="img/contacts/email.png" class="icons"></i>
+                        <a id="nodec" href="mailto:vlad.obvintsev@yandex.ru">vlad.obvintsev@yandex.ru</a> ; <a id="nodec" href="mailto:expressx@yandex.ru">expressx@yandex.ru</a>
+                    </div>
+                </div>
+            </div>
+            <div id="map" style="width: 600px; height: 400px"></div>
+        </div>
+    </article>
+</body>
+<footer>
+    <p>&copy; СЦ «Штурман»</p>
+</footer>
+</html>
